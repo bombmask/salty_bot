@@ -1,4 +1,4 @@
-#! /usr/bin/env python2.7
+#! /usr/bin/env python3.4
 # -*- coding: utf-8 -*-
 
 import datetime
@@ -13,17 +13,20 @@ import sys
 import threading
 import time
 import traceback
-
-import isodate
-import pytz
 import requests
 
+import isodate
 import modules.irc as irc
+import pytz
+
+
 import salty_listener as SaltyListener
 
+## Config variables? Environment detect
 debuging = True
-development = False
+development = False # make it join only one channel and disable web connect. Or have extra settings.
 
+## These are just symbols for thread messaging
 RESTART = "<restart>"
 CHECK = "<check threads>"
 UPDATE = "<update>"
